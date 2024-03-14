@@ -73,7 +73,11 @@ export const ShowMenuPage = ({ value }) => {
                     <div className="w-[118px] h-24 relative">
                       <img
                         className="rounded-xl w-full h-full"
-                        src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,c_fit/${item?.card?.info?.imageId}`}
+                        src={
+                          item?.card?.info?.imageId
+                            ? `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,c_fit/${item?.card?.info?.imageId}`
+                            : `https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg`
+                        }
                         alt=""
                       />
                       <button

@@ -3,13 +3,11 @@ import { GlobalContext } from "./GlobalContextProvider";
 
 const CartMenu = () => {
   const { isCartItem } = useContext(GlobalContext);
-  // console.log(isCartItem);
   useEffect(() => {}, [isCartItem]);
   const logoutBtn = () => {
     window.sessionStorage.clear();
     console.log("logout");
   };
-  console.log(isCartItem);
   return (
     <>
       <div className="sticky top-0 "></div>
